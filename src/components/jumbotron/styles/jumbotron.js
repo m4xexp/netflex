@@ -1,12 +1,10 @@
 import styled from 'styled-components/macro';
 
-export const Container = styled.div``;
-
 export const Item = styled.div`
   display: flex;
   border-bottom: 8px solid #222;
   padding: 50px 5%;
-  color: #ffffff;
+  color: #fff;
   overflow: hidden;
 `;
 
@@ -24,7 +22,17 @@ export const Inner = styled.div`
   }
 `;
 
-export const Pane = styled.div`
+export const TextPane = styled.div`
+  width: 52%;
+
+  @media (max-width: 1000px) {
+    width: 100%;
+    padding: 0 45px;
+    text-align: center;
+  }
+`;
+
+export const ImagePane = styled.div`
   width: 50%;
 
   @media (max-width: 1000px) {
@@ -35,9 +43,9 @@ export const Pane = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-size: 50px;
+  font-size: 3.125rem;
   line-height: 1.1;
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 
   @media (max-width: 600px) {
     font-size: 35px;
@@ -45,12 +53,26 @@ export const Title = styled.h1`
 `;
 
 export const SubTitle = styled.h2`
-  font-size: 26px;
-  font-weight: normal;
+  font-size: 1.625rem;
+  font-weight: 400;
   line-height: normal;
 `;
 
 export const Image = styled.img`
   max-width: 100%;
   height: auto;
+`;
+
+export const Container = styled.div`
+  //   > * {
+  //     & ${TextPane}:nth-child(2n+1) {
+  //       padding: 0 3rem 0 0;
+  //     }
+  //   }
+
+  @media (max-width: 1000px) {
+    ${Item}:last-of-type h2 {
+      margin-bottom: 50px;
+    }
+  }
 `;
