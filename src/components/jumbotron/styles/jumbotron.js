@@ -47,8 +47,14 @@ export const Title = styled.h1`
   line-height: 1.1;
   margin-bottom: 0.5rem;
 
-  @media (max-width: 600px) {
-    font-size: 35px;
+  @media only screen and (min-width: 400px) and (max-width: 549px),
+    only screen and (min-width: 350px) and (max-width: 399px),
+    only screen and (max-width: 349px) {
+    font-size: 1.625rem;
+  }
+
+  @media only screen and (min-width: 550px) and (max-width: 949px) {
+    font-size: 2.5rem;
   }
 `;
 
@@ -56,6 +62,16 @@ export const SubTitle = styled.h2`
   font-size: 1.625rem;
   font-weight: 400;
   line-height: normal;
+
+  @media only screen and (min-width: 400px) and (max-width: 549px),
+    only screen and (min-width: 350px) and (max-width: 399px),
+    only screen and (max-width: 349px) {
+    font-size: 1.125rem;
+  }
+
+  @media only screen and (min-width: 550px) and (max-width: 949px) {
+    font-size: 1.25rem;
+  }
 `;
 
 export const Image = styled.img`
